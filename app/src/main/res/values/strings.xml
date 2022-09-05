@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">PM-L8</string>
+    <string name="ordenar_a_z">Ordenar A-Z</string>
+    <string name="ordenar_z_a">Ordenar Z-A</string>
+    <string name="characters_mainA">Characters</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

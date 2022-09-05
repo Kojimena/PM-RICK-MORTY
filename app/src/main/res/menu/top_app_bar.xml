@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_item_orderaz"
+        android:title="@string/ordenar_a_z"
+        android:iconTint="@color/black"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_item_orderza"
+        android:title="@string/ordenar_z_a"
+        android:iconTint="@color/black"
+        app:showAsAction="never" />
+
+</menu>

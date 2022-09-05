@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_recycler"
+    app:startDestination="@id/characterListFragment">
+
+    <fragment
+        android:id="@+id/characterListFragment"
+        android:name="com.jimena.pm_l8.CharacterListFragment"
+        android:label="fragment_character_list"
+        tools:layout="@layout/fragment_character_list" >
+        <action
+            android:id="@+id/action_characterListFragment_to_characters2"
+            app:destination="@id/characters" />
+    </fragment>
+    <fragment
+        android:id="@+id/characters"
+        android:name="com.jimena.pm_l8.Characters"
+        android:label="fragment_characters"
+        tools:layout="@layout/fragment_characters" />
+
+</navigation>

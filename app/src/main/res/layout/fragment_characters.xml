@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_characters"
+    tools:context=".Characters"
+    android:background="@color/white">
+
+
+    <ImageView
+        android:id="@+id/imageView_characterDetail_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:srcCompat="@tools:sample/avatars"
+        android:layout_marginTop="@dimen/TopMargin_mid"
+        />
+
+    <TextView
+        android:id="@+id/nameCharacter_characterDetail_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Name"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_characterDetail_fragment"
+        app:layout_constraintStart_toStartOf="@+id/imageView_characterDetail_fragment"
+        app:layout_constraintEnd_toEndOf="@id/imageView_characterDetail_fragment"
+        android:layout_marginTop="@dimen/TopMargin_mid"
+        />
+
+    <TextView
+        android:id="@+id/textSpecies_characterDetail_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/MarginTop_min"
+        android:layout_marginEnd="@dimen/MarginStartEnd_mid"
+        android:text="Species:"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/nameCharacter_characterDetail_fragment"
+        app:layout_constraintTop_toBottomOf="@id/nameCharacter_characterDetail_fragment" />
+
+    <TextView
+        android:id="@+id/textRace_characterDetail_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="@dimen/MarginStartEnd_mid"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/textSpecies_characterDetail_fragment"
+        app:layout_constraintStart_toEndOf="@+id/nameCharacter_characterDetail_fragment"
+        app:layout_constraintTop_toTopOf="@+id/textSpecies_characterDetail_fragment"
+        tools:text="Human" />
+
+    <TextView
+        android:id="@+id/textStatus_characterDetail_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status:"
+        android:layout_marginTop="@dimen/MarginTop_min"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/textSpecies_characterDetail_fragment"
+        app:layout_constraintTop_toBottomOf="@id/textSpecies_characterDetail_fragment" />
+
+    <TextView
+        android:id="@+id/textAliveDeath_characterDetail_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/textStatus_characterDetail_fragment"
+        app:layout_constraintEnd_toEndOf="@+id/textRace_characterDetail_fragment"
+        app:layout_constraintTop_toTopOf="@+id/textStatus_characterDetail_fragment"
+        tools:text="Alive" />
+
+    <TextView
+        android:id="@+id/textGender_characterDetail_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender:"
+        android:layout_marginTop="@dimen/MarginTop_min"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/textStatus_characterDetail_fragment"
+        app:layout_constraintTop_toBottomOf="@id/textStatus_characterDetail_fragment" />
+
+    <TextView
+        android:id="@+id/textMaleFemale_characterDetail_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/textGender_characterDetail_fragment"
+        app:layout_constraintEnd_toEndOf="@+id/textRace_characterDetail_fragment"
+        app:layout_constraintTop_toTopOf="@+id/textGender_characterDetail_fragment"
+        tools:text="Male" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
