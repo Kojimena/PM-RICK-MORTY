@@ -7,4 +7,7 @@
     <dimen name="heightcontainer_character">72dp</dimen>
     <dimen name="marginStartImageRecycler">8dp</dimen>
     <dimen name="marginStarTextRecycler">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="widthimgrecycler">40dp</dimen>
+    <dimen name="heiightimgrecycler">40dp</dimen>
 </resources>

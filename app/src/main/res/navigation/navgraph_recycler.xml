@@ -8,16 +8,20 @@
     <fragment
         android:id="@+id/characterListFragment"
         android:name="com.jimena.pm_l8.CharacterListFragment"
-        android:label="fragment_character_list"
+        android:label="Characters"
         tools:layout="@layout/fragment_character_list" >
         <action
-            android:id="@+id/action_characterListFragment_to_characters2"
+            android:id="@+id/action_characterListFragment_to_characters"
             app:destination="@id/characters" />
     </fragment>
     <fragment
         android:id="@+id/characters"
         android:name="com.jimena.pm_l8.Characters"
-        android:label="fragment_characters"
-        tools:layout="@layout/fragment_characters" />
+        android:label="Characters Details"
+        tools:layout="@layout/fragment_characters">
+    <argument
+        android:name="characterInfo"
+        app:argType="com.jimena.pm_l8.entities.Character" />
+    </fragment>
 
 </navigation>

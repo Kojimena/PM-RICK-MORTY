@@ -9,9 +9,11 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.jimena.pm_l8.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var toolbar: MaterialToolbar
+    lateinit var toolbar: MaterialToolbar
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         toolbar = findViewById(R.id.toolbar_MainActivity)
         toolbar.setupWithNavController(navController, appbarConfig)
 
-        setListeners()
+
         setNavigation()
 
     }
@@ -36,21 +38,4 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun setListeners() {
-        toolbar.setOnMenuItemClickListener { menuItem ->
-            when (menuItem.itemId) {
-                R.id.menu_item_orderaz -> {
-                    Toast.makeText(this,"ORDENNN DE LA A Z", Toast.LENGTH_LONG).show()
-                    true
-                }
-
-                R.id.menu_item_orderaz -> {
-                    Toast.makeText(this,"ORDENN DE LA Z A", Toast.LENGTH_LONG).show()
-                    true
-                }
-
-                else -> false
-            }
-        }
-    }
 }

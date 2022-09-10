@@ -10,10 +10,11 @@
     android:background="?attr/selectableItemBackground">
 
     <ImageView
-        android:id="@+id/imageView_recycleViewPlace"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:id="@+id/imageView_recycleViewCharacter"
+        android:layout_width="@dimen/widthimgrecycler"
+        android:layout_height="@dimen/heiightimgrecycler"
         android:background="@drawable/background_round"
+        android:contentDescription="@string/img_type"
         android:clipToOutline="true"
         android:layout_marginStart="@dimen/marginStartImageRecycler"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,27 +23,27 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/textView_recycleViewPlace_name"
+        android:id="@+id/textView_recycleViewCharacter_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Name"
+        tools:text="@string/name"
         android:layout_marginStart="@dimen/marginStarTextRecycler"
-        app:layout_constraintTop_toTopOf="@+id/imageView_recycleViewPlace"
-        app:layout_constraintStart_toEndOf="@id/imageView_recycleViewPlace"
-        app:layout_constraintBottom_toTopOf="@id/textView_recycleViewPlace_Status"
+        app:layout_constraintTop_toTopOf="@+id/imageView_recycleViewCharacter"
+        app:layout_constraintStart_toEndOf="@id/imageView_recycleViewCharacter"
+        app:layout_constraintBottom_toTopOf="@id/textView_recycleViewCharacter_Status"
         android:textColor="@color/black"
         android:textStyle="bold"
         />
 
     <TextView
-        android:id="@+id/textView_recycleViewPlace_Status"
+        android:id="@+id/textView_recycleViewCharacter_Status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@id/imageView_recycleViewPlace"
-        app:layout_constraintStart_toStartOf="@+id/textView_recycleViewPlace_name"
-        app:layout_constraintTop_toBottomOf="@id/textView_recycleViewPlace_name"
-        tools:text="Species" />
+        app:layout_constraintBottom_toBottomOf="@id/imageView_recycleViewCharacter"
+        app:layout_constraintStart_toStartOf="@+id/textView_recycleViewCharacter_name"
+        app:layout_constraintTop_toBottomOf="@id/textView_recycleViewCharacter_name"
+        tools:text="@string/species" />
 
     <TextView
         android:id="@+id/textView_recycleViewPlace_Gender"
@@ -50,9 +51,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/MarginTop_min"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/textView_recycleViewPlace_Status"
-        app:layout_constraintStart_toEndOf="@+id/textView_recycleViewPlace_Status"
-        app:layout_constraintTop_toTopOf="@+id/textView_recycleViewPlace_Status"
-        tools:text="Gender" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView_recycleViewCharacter_Status"
+        app:layout_constraintStart_toEndOf="@+id/textView_recycleViewCharacter_Status"
+        app:layout_constraintTop_toTopOf="@+id/textView_recycleViewCharacter_Status"
+        tools:text="@string/gender" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

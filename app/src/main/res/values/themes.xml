@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.PML8" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/verde</item>
+        <item name="colorPrimary">@color/azul</item>
         <item name="colorPrimaryVariant">@color/verde_claro</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -14,4 +14,13 @@
         <item name="android:fitsSystemWindows">true</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.PML8.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.PML8.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.PML8.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
