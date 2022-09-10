@@ -34,7 +34,24 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setNavigation() {
-        toolbar.visibility = View.VISIBLE
+        // Agregamos listener que se activará cuando se cambie de destination
+        navController.addOnDestinationChangedListener {_, destination, _ ->
+            // Ocultaremos Toolbar cuando está en login, y lo mostraremos en el resto
+            when(destination.id) {
+                R.id.characterListFragment -> {
+                    toolbar.visibility = View.VISIBLE
+                    toolbar.menu.findItem(R.id.menu_item_orderaz).isVisible = true
+                    toolbar.menu.findItem(R.id.menu_item_orderza).isVisible = true
+                }
+
+                R.id.characters -> {
+                    toolbar.visibility = View.VISIBLE
+                    //esconder la opcion de ordenar
+                    toolbar.menu.findItem(R.id.menu_item_orderaz).isVisible = false
+                    toolbar.menu.findItem(R.id.menu_item_orderza).isVisible = false
+                }
+            }
+        }
 
     }
 
