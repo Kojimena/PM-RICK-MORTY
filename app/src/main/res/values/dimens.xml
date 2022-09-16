@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="zeroDp">0dp</dimen>
+    <dimen name="TopMargin_mid">30dp</dimen>
+    <dimen name="MarginTop_min">10dp</dimen>
+    <dimen name="MarginStartEnd_mid">40dp</dimen>
+    <dimen name="heightcontainer_character">72dp</dimen>
+    <dimen name="marginStartImageRecycler">8dp</dimen>
+    <dimen name="marginStarTextRecycler">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="widthimgrecycler">40dp</dimen>
+    <dimen name="heiightimgrecycler">40dp</dimen>
+</resources>

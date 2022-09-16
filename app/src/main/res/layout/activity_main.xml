@@ -6,13 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_MainActivity"
+        android:layout_width="@dimen/zeroDp"
+        app:menu="@menu/top_app_bar"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/characters_mainA"
+        style="@style/Widget.MaterialComponents.Toolbar.Primary"
+        />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_MainActivity"
+        android:layout_width="@dimen/zeroDp"
+        android:layout_height="@dimen/zeroDp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/toolbar_MainActivity"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/navgraph_recycler" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
