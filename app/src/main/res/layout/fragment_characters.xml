@@ -100,6 +100,48 @@
         app:layout_constraintTop_toTopOf="@+id/textGender_characters_fragment"
         tools:text="Male" />
 
+    <TextView
+        android:id="@+id/origin_characters_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/MarginTop_min"
+        android:text="@string/origin"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/textGender_characters_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/textGender_characters_fragment" />
+
+    <TextView
+        android:id="@+id/originName_characters_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/origin_characters_fragment"
+        app:layout_constraintEnd_toEndOf="@+id/textMaleFemale_characters_fragment"
+        app:layout_constraintTop_toTopOf="@+id/origin_characters_fragment"
+        tools:text="Earth (C-137)" />
+
+    <TextView
+        android:id="@+id/episodeaperances_characters_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/MarginTop_min"
+        android:text="@string/episode_appearances"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/origin_characters_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/origin_characters_fragment" />
+
+    <TextView
+        android:id="@+id/numberofepisodes_characters_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/episodeaperances_characters_fragment"
+        app:layout_constraintEnd_toEndOf="@+id/originName_characters_fragment"
+        app:layout_constraintTop_toTopOf="@+id/episodeaperances_characters_fragment"
+        tools:text="4" />
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

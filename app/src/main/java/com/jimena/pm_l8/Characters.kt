@@ -9,6 +9,12 @@ import androidx.navigation.fragment.navArgs
 import coil.load
 import coil.request.CachePolicy
 import coil.transform.CircleCropTransformation
+import kotlin.properties.Delegates
+import com.jimena.pm_l8.datasource.api.RetrofitInstance
+import com.jimena.pm_l8.datasource.model.CharacterDto
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class Characters : Fragment(R.layout.fragment_characters) {
 
@@ -17,6 +23,10 @@ class Characters : Fragment(R.layout.fragment_characters) {
     private lateinit var species : TextView
     private lateinit var status : TextView
     private lateinit var gender : TextView
+    private var idchar by Delegates.notNull<Int>()
+    private lateinit var resultAPI : CharacterDto
+    private lateinit var origin : TextView
+    private lateinit var epAppearances: TextView
 
     private val args: CharactersArgs by navArgs()
 
@@ -28,13 +38,15 @@ class Characters : Fragment(R.layout.fragment_characters) {
         species = view.findViewById(R.id.textRace_characters_fragment)
         status = view.findViewById(R.id.textAliveDeath_characters_fragment)
         gender = view.findViewById(R.id.textMaleFemale_characters_fragment)
+        origin = view.findViewById(R.id.originName_characters_fragment)
+        epAppearances = view.findViewById(R.id.numberofepisodes_characters_fragment)
 
-        setImage()
-        setInfo()
+        idchar = args.characterId
+        apiReq()
     }
 
     private fun setImage() {
-        image.load(args.characterInfo.image) {
+        image.load(resultAPI.image) {
             transformations(CircleCropTransformation())
             diskCachePolicy(CachePolicy.ENABLED)
             memoryCachePolicy(CachePolicy.ENABLED)
@@ -44,9 +56,32 @@ class Characters : Fragment(R.layout.fragment_characters) {
     }
 
     private fun setInfo() {
-        name.text = args.characterInfo.name
-        species.text = args.characterInfo.species
-        status.text = args.characterInfo.status
-        gender.text = args.characterInfo.gender
+        name.text = resultAPI.name
+        species.text = resultAPI.species
+        status.text =  resultAPI.status
+        gender.text = resultAPI.gender
+        origin.text = resultAPI.origin.name
+        epAppearances.text = resultAPI.episode.size.toString()
+    }
+
+    private fun apiReq() {
+
+        RetrofitInstance.api.getidCharacter(idchar).enqueue(object : Callback<CharacterDto> {
+                override fun onResponse(
+                    call: Call<CharacterDto>,
+                    response: Response<CharacterDto>
+                ) {
+                    if (response.isSuccessful && response.body() != null) {
+                        resultAPI = response.body()!!
+                        setImage()
+                        setInfo()
+                    }
+                }
+
+                override fun onFailure(call: Call<CharacterDto>, t: Throwable) {
+                    println("Error")
+                }
+
+            })
     }
 }

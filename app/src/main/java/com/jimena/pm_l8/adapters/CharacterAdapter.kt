@@ -12,16 +12,17 @@ import coil.request.CachePolicy
 import coil.transform.CircleCropTransformation
 import com.jimena.pm_l8.R
 import com.jimena.pm_l8.entities.Character
+import com.jimena.pm_l8.datasource.model.CharacterDto
 
 
 class CharacterAdapter(
-    private val dataSet: MutableList<Character>,
+    private val dataSet: List<CharacterDto>,
     private val characterListener: CharacterListener
 ):
     RecyclerView.Adapter<CharacterAdapter.ViewHolder>() {
 
     interface CharacterListener {
-        fun onPlaceClicked(data: Character, position: Int)
+        fun onPlaceClicked(data: CharacterDto, position: Int)
     }
 
     class ViewHolder(private val view: View,
@@ -30,9 +31,9 @@ class CharacterAdapter(
         private val textName: TextView = view.findViewById(R.id.textView_recycleViewCharacter_name)
         private val textRaceStatus: TextView = view.findViewById(R.id.textView_recycleViewCharacter_Status)
         private val layout: ConstraintLayout = view.findViewById(R.id.layout_itemPlace)
-        private lateinit var place: Character
+        private lateinit var place: CharacterDto
 
-        fun setData(place: Character) {
+        fun setData(place: CharacterDto) {
             this.place = place
             textName.text = place.name
             (place.species + " - " + place.status).also { textRaceStatus.text = it }

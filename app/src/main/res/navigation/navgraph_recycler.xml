@@ -20,8 +20,8 @@
         android:label="Characters Details"
         tools:layout="@layout/fragment_characters">
     <argument
-        android:name="characterInfo"
-        app:argType="com.jimena.pm_l8.entities.Character" />
+        android:name="characterId"
+        app:argType="integer" />
     </fragment>
 
 </navigation>
