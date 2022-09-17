@@ -11,7 +11,6 @@ import coil.load
 import coil.request.CachePolicy
 import coil.transform.CircleCropTransformation
 import com.jimena.pm_l8.R
-import com.jimena.pm_l8.entities.Character
 import com.jimena.pm_l8.datasource.model.CharacterDto
 
 

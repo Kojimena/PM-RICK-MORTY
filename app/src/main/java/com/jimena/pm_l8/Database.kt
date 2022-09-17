@@ -2,7 +2,7 @@ package com.jimena.pm_l8
 import com.jimena.pm_l8.entities.Character
 import java.util.*
 
-
+// ESTA CLASE YA NO SE UTILIZA EN LAB 9
 object RickAndMortyDB {
 
     private val characters = mutableListOf(
