@@ -10,4 +10,15 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="widthimgrecycler">40dp</dimen>
     <dimen name="heiightimgrecycler">40dp</dimen>
+    <dimen name="paddingsize">10dp</dimen>
+    <dimen name="titlemax">30sp</dimen>
+    <dimen name="titlemid">20sp</dimen>
+    <dimen name="margintopmid">20dp</dimen>
+    <dimen name="titlemin">10sp</dimen>
+    <dimen name="marginTopFull">40dp</dimen>
+    <dimen name="marginStartEnd">32dp</dimen>
+    <dimen name="marginTopmin">10dp</dimen>
+    <dimen name="marginTopmid">20dp</dimen>
+    <dimen name="marginTopMax">60dp</dimen>
+    <dimen name="paddingsizemid">25dp</dimen>
 </resources>

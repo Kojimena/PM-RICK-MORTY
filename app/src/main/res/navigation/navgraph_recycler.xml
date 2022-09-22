@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph_recycler"
-    app:startDestination="@id/characterListFragment">
+    app:startDestination="@id/login">
 
     <fragment
         android:id="@+id/characterListFragment"
@@ -22,6 +22,15 @@
     <argument
         android:name="characterId"
         app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="com.jimena.pm_l8.Login"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_characterListFragment"
+            app:destination="@id/characterListFragment" />
     </fragment>
 
 </navigation>

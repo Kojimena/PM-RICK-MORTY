@@ -50,6 +50,10 @@ class MainActivity : AppCompatActivity() {
                     toolbar.menu.findItem(R.id.menu_item_orderaz).isVisible = false
                     toolbar.menu.findItem(R.id.menu_item_orderza).isVisible = false
                 }
+
+                    else -> {
+                        toolbar.visibility = View.GONE
+                    }
             }
         }
 

@@ -9,6 +9,7 @@
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar_MainActivity"
         android:layout_width="@dimen/zeroDp"
+        android:backgroundTint="@color/verde_oscuro"
         app:menu="@menu/top_app_bar"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"

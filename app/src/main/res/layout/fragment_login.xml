@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/correoLogin"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStartEnd"
+        android:layout_marginTop="@dimen/marginTopmid"
+        android:layout_marginEnd="@dimen/marginStartEnd"
+        android:hint="@string/ingreso_correo"
+        android:textAllCaps="false"
+        android:textColorHint="@color/gris"
+        app:boxStrokeColor="@color/gris"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/passwordLogin"
+        app:layout_constraintTop_toBottomOf="@id/Rickmortylogo">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passworduser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        app:endIconMode="password_toggle"
+        app:endIconCheckable="true"
+        android:textColorHint="@color/gris"
+        app:boxStrokeColor="@color/gris"
+        android:textAllCaps="false"
+        android:layout_marginStart="@dimen/marginStartEnd"
+        android:layout_marginEnd="@dimen/marginStartEnd"
+        android:layout_marginTop="@dimen/marginTopmid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/correoLogin"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordLogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:textColorHint="@color/gris"
+            app:boxStrokeColor="@color/gris"
+            android:textAllCaps="false"
+            android:layout_marginStart="@dimen/marginStartEnd"
+            android:layout_marginEnd="@dimen/marginStartEnd"
+            android:layout_marginTop="@dimen/marginTopmid"
+            app:layout_constraintEnd_toEndOf="@id/correoLogin"
+            app:layout_constraintStart_toStartOf="@id/correoLogin"
+            app:layout_constraintTop_toBottomOf="@id/correoLogin"
+            app:layout_constraintBottom_toTopOf="@id/iniciosesion"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"/>
+
+    <TextView
+        android:id="@+id/NewuserLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Her21199@uvg.edu.gt"
+        android:layout_marginTop="200dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iniciosesion" />
+
+
+    <Button
+        android:id="@+id/iniciosesion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTopmid"
+        android:backgroundTint="@color/verde_oscuro"
+        android:text="@string/inicio_sesion"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/passworduser"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/passworduser"
+        app:layout_constraintTop_toBottomOf="@+id/passworduser" />
+
+    <ImageView
+        android:id="@+id/Rickmortylogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:src="@mipmap/logo_rickandmorty_foreground"
+        tools:layout_editor_absoluteX="151dp"
+        app:layout_constraintBottom_toTopOf="@+id/correoLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:layout_editor_absoluteY="36dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
