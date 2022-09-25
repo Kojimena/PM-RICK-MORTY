@@ -23,4 +23,7 @@
     <string name="episode_appearances">Episode appearances:</string>
     <string name="Cerrarsesion">Log out</string>
     <string name="keyIniciosession">Her21199@uvg.edu.gt</string>
+    <string name="password">Contraseña</string>
+    <string name="correoingreso">Her21199@uvg.edu.gt</string>
+    <string name="logo_fragment_login">logo_fragment_login</string>
 </resources>
