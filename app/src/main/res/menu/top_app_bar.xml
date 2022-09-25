@@ -12,5 +12,10 @@
         android:title="@string/ordenar_z_a"
         android:iconTint="@color/black"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_item_cerrar_sesion"
+        android:title="@string/Cerrarsesion"
+        android:iconTint="@color/black"
+        app:showAsAction="never" />
 
 </menu>

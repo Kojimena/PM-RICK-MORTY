@@ -21,4 +21,5 @@
     <string name="name">name</string>
     <string name="origin">Origin:</string>
     <string name="episode_appearances">Episode appearances:</string>
+    <string name="Cerrarsesion">Log out</string>
 </resources>

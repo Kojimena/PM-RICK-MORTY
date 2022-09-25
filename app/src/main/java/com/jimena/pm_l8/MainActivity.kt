@@ -40,6 +40,9 @@ class MainActivity : AppCompatActivity() {
             when(destination.id) {
                 R.id.characterListFragment -> {
                     toolbar.visibility = View.VISIBLE
+                    //quitar flecha de regreso
+                    supportActionBar?.setDisplayHomeAsUpEnabled(false)
+
                     toolbar.menu.findItem(R.id.menu_item_orderaz).isVisible = true
                     toolbar.menu.findItem(R.id.menu_item_orderza).isVisible = true
                 }

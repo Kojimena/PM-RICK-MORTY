@@ -50,6 +50,7 @@ class CharacterListFragment : Fragment(R.layout.fragment_character_list), Charac
                     true
                 }
                 else -> false
+
             }
         }
 
