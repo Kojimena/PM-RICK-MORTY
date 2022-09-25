@@ -14,7 +14,7 @@
     <string name="inicio_sesion">Iniciar sesión</string>
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="img_type">imgen de tipo de personaje</string>
+    <string name="img_type">imagen de tipo de personaje</string>
     <string name="species">Species:</string>
     <string name="status">Status:</string>
     <string name="gender">Gender:</string>
@@ -22,4 +22,5 @@
     <string name="origin">Origin:</string>
     <string name="episode_appearances">Episode appearances:</string>
     <string name="Cerrarsesion">Log out</string>
+    <string name="keyIniciosession">Her21199@uvg.edu.gt</string>
 </resources>

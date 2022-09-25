@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_characterListFragment_to_characters"
             app:destination="@id/characters" />
+        <action
+            android:id="@+id/action_characterListFragment_to_login"
+            app:destination="@id/login" />
     </fragment>
     <fragment
         android:id="@+id/characters"
