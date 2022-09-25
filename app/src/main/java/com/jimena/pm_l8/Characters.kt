@@ -5,7 +5,9 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import androidx.navigation.ui.AppBarConfiguration
 import coil.load
 import coil.request.CachePolicy
 import coil.transform.CircleCropTransformation
@@ -27,6 +29,7 @@ class Characters : Fragment(R.layout.fragment_characters) {
     private lateinit var resultAPI : CharacterDto
     private lateinit var origin : TextView
     private lateinit var epAppearances: TextView
+
 
     private val args: CharactersArgs by navArgs()
 
@@ -84,4 +87,5 @@ class Characters : Fragment(R.layout.fragment_characters) {
 
             })
     }
+
 }

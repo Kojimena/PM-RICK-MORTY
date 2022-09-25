@@ -84,11 +84,6 @@ class Login: Fragment(R.layout.fragment_login) {
                 InputLayouEmail.editText!!.text.clear()
                 InputLayouPassword.editText!!.text.clear()
 
-                Toast.makeText(
-                    context,
-                    "Datos guardados",
-                    Toast.LENGTH_SHORT
-                ).show()
             }
         }
         requireView().findNavController().navigate(action)
