@@ -1,5 +1,5 @@
 # Programación de plataformas moviles
-## Laboratorio 9 RickandMorty
+## Laboratorio 10 RickandMorty
 
 
 ## Índice
