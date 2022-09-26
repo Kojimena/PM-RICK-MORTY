@@ -16,7 +16,9 @@
             app:destination="@id/characters" />
         <action
             android:id="@+id/action_characterListFragment_to_login"
-            app:destination="@id/login" />
+            app:destination="@id/login"
+            app:popUpTo="@id/characterListFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
     <fragment
         android:id="@+id/characters"
@@ -34,7 +36,9 @@
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_login_to_characterListFragment"
-            app:destination="@id/characterListFragment" />
+            app:destination="@id/characterListFragment"
+            app:popUpTo="@id/login"
+            app:popUpToInclusive="true"/>
     </fragment>
 
 </navigation>
