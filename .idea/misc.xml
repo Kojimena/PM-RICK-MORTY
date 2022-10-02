@@ -4,12 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/background_round.xml" value="0.167" />
+        <entry key="app/src/main/res/drawable/ic_delete.xml" value="0.2045" />
+        <entry key="app/src/main/res/drawable/ic_sincro.xml" value="0.2045" />
         <entry key="app/src/main/res/layout-v31/fragment_characters.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.14886016845703126" />
         <entry key="app/src/main/res/layout/activity_top_app_bar.xml" value="0.14270833333333333" />
         <entry key="app/src/main/res/layout/fragment_character_list.xml" value="0.21048190351845558" />
         <entry key="app/src/main/res/layout/fragment_characters.xml" value="0.29993896484375004" />
-        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.14342629482071714" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.5294568734339984" />
         <entry key="app/src/main/res/layout/item_recycler_character.xml" value="0.4545141911161119" />
         <entry key="app/src/main/res/menu/top_app_bar.xml" value="0.2802001953125" />
       </map>

@@ -24,7 +24,7 @@
         android:layout_marginTop="@dimen/TopMargin_mid"
         />
 
-    <TextView
+    <!--<TextView
         android:id="@+id/nameCharacter_characters_fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,9 +35,10 @@
         app:layout_constraintStart_toStartOf="@+id/imageView_characters_fragment"
         app:layout_constraintEnd_toEndOf="@id/imageView_characters_fragment"
         android:layout_marginTop="@dimen/TopMargin_mid"
-        />
+        />-->
 
-    <TextView
+
+    <!--<TextView
         android:id="@+id/textSpecies_characters_fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -46,9 +47,9 @@
         android:text="@string/species"
         android:textColor="@color/black"
         app:layout_constraintEnd_toStartOf="@+id/nameCharacter_characters_fragment"
-        app:layout_constraintTop_toBottomOf="@id/nameCharacter_characters_fragment" />
+        app:layout_constraintTop_toBottomOf="@id/nameCharacter_characters_fragment" />-->
 
-    <TextView
+    <!--<TextView
         android:id="@+id/textRace_characters_fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -58,9 +59,9 @@
         app:layout_constraintBottom_toBottomOf="@+id/textSpecies_characters_fragment"
         app:layout_constraintStart_toEndOf="@+id/nameCharacter_characters_fragment"
         app:layout_constraintTop_toTopOf="@+id/textSpecies_characters_fragment"
-        tools:text="Human" />
+        tools:text="Human" />-->
 
-    <TextView
+    <!--<TextView
         android:id="@+id/textStatus_characters_fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -68,9 +69,9 @@
         android:layout_marginTop="@dimen/MarginTop_min"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/textSpecies_characters_fragment"
-        app:layout_constraintTop_toBottomOf="@id/textSpecies_characters_fragment" />
+        app:layout_constraintTop_toBottomOf="@id/textSpecies_characters_fragment" />-->
 
-    <TextView
+<!--    <TextView
         android:id="@+id/textAliveDeath_characters_fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -98,50 +99,205 @@
         app:layout_constraintBottom_toBottomOf="@+id/textGender_characters_fragment"
         app:layout_constraintEnd_toEndOf="@+id/textRace_characters_fragment"
         app:layout_constraintTop_toTopOf="@+id/textGender_characters_fragment"
-        tools:text="Male" />
+        tools:text="Male" />-->
 
-    <TextView
-        android:id="@+id/origin_characters_fragment"
-        android:layout_width="wrap_content"
+<!--    <TextView-->
+<!--        android:id="@+id/origin_characters_fragment"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="@dimen/MarginTop_min"-->
+<!--        android:text="@string/origin"-->
+<!--        android:textColor="@color/black"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/textGender_characters_fragment"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textGender_characters_fragment" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/originName_characters_fragment"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textColor="@color/black"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/origin_characters_fragment"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/textMaleFemale_characters_fragment"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/origin_characters_fragment"-->
+<!--        tools:text="Earth (C-137)" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/episodeaperances_characters_fragment"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="@dimen/MarginTop_min"-->
+<!--        android:text="@string/episode_appearances"-->
+<!--        android:textColor="@color/black"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/origin_characters_fragment"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/origin_characters_fragment" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/numberofepisodes_characters_fragment"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textColor="@color/black"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/episodeaperances_characters_fragment"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/originName_characters_fragment"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/episodeaperances_characters_fragment"-->
+<!--        tools:text="4" />-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameCharacter_characters_fragment"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/MarginTop_min"
-        android:text="@string/origin"
+        android:layout_marginTop="@dimen/marginTopmid"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/textGender_characters_fragment"
-        app:layout_constraintTop_toBottomOf="@+id/textGender_characters_fragment" />
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textColorHint="@color/gris"
+        app:boxStrokeColor="@color/gris"
+        android:hint="Name"
+        android:layout_marginStart="@dimen/marginStartEnd"
+        android:layout_marginEnd="@dimen/marginStartEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_characters_fragment"
+        tools:text="Name">
 
-    <TextView
-        android:id="@+id/originName_characters_fragment"
-        android:layout_width="wrap_content"
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textSpecies_characters_fragment"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTopmid"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/origin_characters_fragment"
-        app:layout_constraintEnd_toEndOf="@+id/textMaleFemale_characters_fragment"
-        app:layout_constraintTop_toTopOf="@+id/origin_characters_fragment"
-        tools:text="Earth (C-137)" />
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textColorHint="@color/gris"
+        app:boxStrokeColor="@color/gris"
+        android:hint="Species"
+        android:layout_marginStart="@dimen/marginStartEnd"
+        android:layout_marginEnd="@dimen/marginStartEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameCharacter_characters_fragment"
+        >
 
-    <TextView
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textStatus_characters_fragment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTopmid"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textColorHint="@color/gris"
+        app:boxStrokeColor="@color/gris"
+        android:hint="Status"
+        android:layout_marginStart="@dimen/marginStartEnd"
+        android:layout_marginEnd="@dimen/marginStartEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSpecies_characters_fragment"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textGender_characters_fragment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/TopMargin_mid"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textColorHint="@color/gris"
+        app:boxStrokeColor="@color/gris"
+        android:hint="@string/gender"
+        android:layout_marginStart="@dimen/marginStartEnd"
+        android:layout_marginEnd="@dimen/marginStartEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textStatus_characters_fragment"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textOrigin_characters_fragment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/TopMargin_mid"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textColorHint="@color/gris"
+        app:boxStrokeColor="@color/gris"
+        android:hint="@string/origin"
+        android:layout_marginStart="@dimen/marginStartEnd"
+        android:layout_marginEnd="@dimen/marginStartEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textGender_characters_fragment"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/episodeaperances_characters_fragment"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/MarginTop_min"
-        android:text="@string/episode_appearances"
+        android:layout_marginTop="@dimen/TopMargin_mid"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/origin_characters_fragment"
-        app:layout_constraintTop_toBottomOf="@+id/origin_characters_fragment" />
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textColorHint="@color/gris"
+        app:boxStrokeColor="@color/gris"
+        android:hint="@string/episode_appearances"
+        android:inputType="number"
+        android:layout_marginStart="@dimen/marginStartEnd"
+        android:layout_marginEnd="@dimen/marginStartEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textOrigin_characters_fragment"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/numberofepisodes_characters_fragment"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/saveButton_characters_fragment"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/episodeaperances_characters_fragment"
-        app:layout_constraintEnd_toEndOf="@+id/originName_characters_fragment"
-        app:layout_constraintTop_toTopOf="@+id/episodeaperances_characters_fragment"
-        tools:text="4" />
-
-
-
+        android:layout_marginTop="@dimen/TopMargin_mid"
+        android:layout_marginStart="@dimen/marginStartEnd"
+        android:layout_marginEnd="@dimen/marginStartEnd"
+        android:backgroundTint="@color/purple_500"
+        android:text="@string/guardar_fragmentcharacters"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/episodeaperances_characters_fragment"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
