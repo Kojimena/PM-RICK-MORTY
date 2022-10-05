@@ -43,11 +43,12 @@ class MainActivity : AppCompatActivity() {
                     //quitar flecha de regreso
                     toolbar.navigationIcon = null
 
-
+                    toolbar.menu.findItem(R.id.menu_item_cerrar_sesion).isVisible = true
                     toolbar.menu.findItem(R.id.menu_item_orderaz).isVisible = true
                     toolbar.menu.findItem(R.id.menu_item_orderza).isVisible = true
                     toolbar.menu.findItem(R.id.menu_item_sincronizar).isVisible = true
                     toolbar.menu.findItem(R.id.menu_item_eliminar).isVisible = false
+
                 }
 
                 R.id.characters -> {

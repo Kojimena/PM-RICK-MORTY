@@ -8,6 +8,7 @@ import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.room.Room
 import coil.load
@@ -82,7 +83,7 @@ class Characters : Fragment(R.layout.fragment_characters) {
                         ) { _, _ ->
                                CoroutineScope(Dispatchers.IO).launch {
                                     database.characterDao().delete(characters)
-                                }
+                               }
                         }
                         setNegativeButton("Cancel") { _, _ -> }
                         show()
