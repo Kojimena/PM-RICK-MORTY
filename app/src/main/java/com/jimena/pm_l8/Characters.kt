@@ -94,7 +94,7 @@ class Characters : Fragment(R.layout.fragment_characters) {
                     val builder = AlertDialog.Builder(requireContext())
                     builder.apply {
                         setTitle("Warning")
-                        setMessage("Are you sure you want to update this character?")
+                        setMessage("Are you sure you want to synchronize this character?")
                         setPositiveButton("Yes"
                         ) { _, _ ->
                             CoroutineScope(Dispatchers.IO).launch {
@@ -110,7 +110,7 @@ class Characters : Fragment(R.layout.fragment_characters) {
             }
         }
         buttonGuardar.setOnClickListener{
-            getDataFromInput()
+            getEditData()
         }
     }
 
@@ -162,24 +162,20 @@ class Characters : Fragment(R.layout.fragment_characters) {
         })
     }
 
-    private fun saveEditData() {
-        CoroutineScope(Dispatchers.IO).launch {
-            database.characterDao().update(characters)
-            CoroutineScope(Dispatchers.Main).launch {
-                Toast.makeText(requireContext(), "Guardado correctamente", Toast.LENGTH_SHORT).show()
-            }
-        }
-    }
 
-    private fun getDataFromInput() {
-
+    private fun getEditData() {
         characters.name = name.text.toString()
         characters.species = species.text.toString()
         characters.gender = gender.text.toString()
         characters.origin = origin.text.toString()
         characters.status = status.text.toString()
         characters.episode = epAppearances.text.toString().toIntOrNull()
-        saveEditData()
+        CoroutineScope(Dispatchers.IO).launch {
+            database.characterDao().update(characters)
+            CoroutineScope(Dispatchers.Main).launch {
+                Toast.makeText(requireContext(), "Guardado correctamente", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     private fun setChangesApi(){
@@ -196,7 +192,7 @@ class Characters : Fragment(R.layout.fragment_characters) {
         gender.setText(resultAPI.gender)
         origin.setText(resultAPI.origin.name)
         epAppearances.setText(resultAPI.episode.size.toString())
-        getDataFromInput()
+        getEditData()
     }
 
 
