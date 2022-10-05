@@ -92,19 +92,13 @@ class Characters : Fragment(R.layout.fragment_characters) {
                 }
 
                 R.id.menu_item_sincronizar-> {
-                    val builder = AlertDialog.Builder(requireContext())
-                    builder.apply {
-                        setTitle("Warning")
-                        setMessage("Are you sure you want to synchronize this character?")
-                        setPositiveButton("Yes"
-                        ) { _, _ ->
-                            CoroutineScope(Dispatchers.IO).launch {
-                               apiReq()
-                            }
-                        }
-                        setNegativeButton("Cancel") { _, _ -> }
-                        show()
+                    //Limpiamos la lista
+                    CoroutineScope(Dispatchers.IO).launch {
+                        database.characterDao().deleteAll()
+                        apiReq()
                     }
+                    Toast.makeText(requireContext(), "Data sincronizada", Toast.LENGTH_SHORT).show()
+
                     true
                 }
                 else -> true
@@ -112,6 +106,8 @@ class Characters : Fragment(R.layout.fragment_characters) {
         }
         buttonGuardar.setOnClickListener{
             getEditData()
+            Toast.makeText(requireContext(), "Cambios guardados correctamente", Toast.LENGTH_SHORT).show()
+
         }
     }
 
@@ -173,9 +169,6 @@ class Characters : Fragment(R.layout.fragment_characters) {
         characters.episode = epAppearances.text.toString().toIntOrNull()
         CoroutineScope(Dispatchers.IO).launch {
             database.characterDao().update(characters)
-            CoroutineScope(Dispatchers.Main).launch {
-                Toast.makeText(requireContext(), "Guardado correctamente", Toast.LENGTH_SHORT).show()
-            }
         }
     }
 
