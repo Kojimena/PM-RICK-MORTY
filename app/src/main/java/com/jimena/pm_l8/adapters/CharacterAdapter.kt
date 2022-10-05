@@ -11,29 +11,31 @@ import coil.load
 import coil.request.CachePolicy
 import coil.transform.CircleCropTransformation
 import com.jimena.pm_l8.R
-import com.jimena.pm_l8.datasource.model.CharacterDto
+import com.jimena.pm_l8.datasource.model.DataCharacters
 
 
 class CharacterAdapter(
-    private val dataSet: List<CharacterDto>,
+    private val dataSet: MutableList<DataCharacters>,
     private val characterListener: CharacterListener
 ):
     RecyclerView.Adapter<CharacterAdapter.ViewHolder>() {
 
     interface CharacterListener {
-        fun onPlaceClicked(data: CharacterDto, position: Int)
+        fun onPlaceClicked(data: DataCharacters, position: Int)
+
     }
 
-    class ViewHolder(private val view: View,
-                     private val listener: CharacterListener) : RecyclerView.ViewHolder(view) {
+    class ViewHolder( //Aqui se definen los elementos que se van a mostrar en el recycler view
+        private val view: View,
+        private val listener: CharacterListener) : RecyclerView.ViewHolder(view) {
         private val imageType: ImageView = view.findViewById(R.id.imageView_recycleViewCharacter)
         private val textName: TextView = view.findViewById(R.id.textView_recycleViewCharacter_name)
         private val textRaceStatus: TextView = view.findViewById(R.id.textView_recycleViewCharacter_Status)
         private val layout: ConstraintLayout = view.findViewById(R.id.layout_itemPlace)
-        private lateinit var place: CharacterDto
+        private lateinit var character: DataCharacters
 
-        fun setData(place: CharacterDto) {
-            this.place = place
+        fun setData(place: DataCharacters) {
+            this.character = place
             textName.text = place.name
             (place.species + " - " + place.status).also { textRaceStatus.text = it }
 
@@ -47,9 +49,9 @@ class CharacterAdapter(
             setListeners()
         }
 
-        private fun setListeners() {
+        private fun setListeners() { //Acciones que se ejecutan al pulsar sobre un item
             layout.setOnClickListener {
-                listener.onPlaceClicked(place, this.adapterPosition)
+                listener.onPlaceClicked(character, this.adapterPosition)
             }
         }
 

@@ -46,6 +46,8 @@ class MainActivity : AppCompatActivity() {
 
                     toolbar.menu.findItem(R.id.menu_item_orderaz).isVisible = true
                     toolbar.menu.findItem(R.id.menu_item_orderza).isVisible = true
+                    toolbar.menu.findItem(R.id.menu_item_sincronizar).isVisible = true
+                    toolbar.menu.findItem(R.id.menu_item_eliminar).isVisible = false
                 }
 
                 R.id.characters -> {
@@ -53,6 +55,9 @@ class MainActivity : AppCompatActivity() {
                     //esconder la opcion de ordenar
                     toolbar.menu.findItem(R.id.menu_item_orderaz).isVisible = false
                     toolbar.menu.findItem(R.id.menu_item_orderza).isVisible = false
+                    toolbar.menu.findItem(R.id.menu_item_cerrar_sesion).isVisible = false
+                    toolbar.menu.findItem(R.id.menu_item_sincronizar).isVisible = true
+                    toolbar.menu.findItem(R.id.menu_item_eliminar).isVisible = true
                 }
 
                     else -> {

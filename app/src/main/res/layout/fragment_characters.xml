@@ -154,12 +154,14 @@
         android:hint="Name"
         android:layout_marginStart="@dimen/marginStartEnd"
         android:layout_marginEnd="@dimen/marginStartEnd"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView_characters_fragment"
         tools:text="Name">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameCharacterEditText_characters_fragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black" />
@@ -170,20 +172,19 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/marginTopmid"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textAllCaps="false"
-        android:textColorHint="@color/gris"
-        app:boxStrokeColor="@color/gris"
         android:hint="Species"
-        android:layout_marginStart="@dimen/marginStartEnd"
-        android:layout_marginEnd="@dimen/marginStartEnd"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameCharacter_characters_fragment"
-        >
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gris"
+        android:textStyle="bold"
+        app:boxStrokeColor="@color/gris"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintEnd_toEndOf="@+id/nameCharacter_characters_fragment"
+        app:layout_constraintStart_toStartOf="@+id/nameCharacter_characters_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/nameCharacter_characters_fragment">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textSpeciesEditText_characters_fragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black" />
@@ -194,19 +195,19 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/marginTopmid"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textAllCaps="false"
-        android:textColorHint="@color/gris"
-        app:boxStrokeColor="@color/gris"
         android:hint="Status"
-        android:layout_marginStart="@dimen/marginStartEnd"
-        android:layout_marginEnd="@dimen/marginStartEnd"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textSpecies_characters_fragment"
-        >
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gris"
+        android:textStyle="bold"
+        app:boxStrokeColor="@color/gris"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintEnd_toEndOf="@+id/textSpecies_characters_fragment"
+        app:layout_constraintStart_toStartOf="@+id/textSpecies_characters_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/textSpecies_characters_fragment">
+
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textStatusEditText_characters_fragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black" />
@@ -214,90 +215,89 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textGender_characters_fragment"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/TopMargin_mid"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textAllCaps="false"
-        android:textColorHint="@color/gris"
-        app:boxStrokeColor="@color/gris"
+        android:layout_marginTop="@dimen/marginTopmid"
         android:hint="@string/gender"
-        android:layout_marginStart="@dimen/marginStartEnd"
-        android:layout_marginEnd="@dimen/marginStartEnd"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textStatus_characters_fragment"
-        >
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gris"
+        android:textStyle="bold"
+        app:boxStrokeColor="@color/gris"
+        app:layout_constraintEnd_toEndOf="@+id/textStatus_characters_fragment"
+        app:layout_constraintStart_toStartOf="@+id/textStatus_characters_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/textStatus_characters_fragment">
+
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textGenderEditText_characters_fragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black" />
-        </com.google.android.material.textfield.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textOrigin_characters_fragment"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/TopMargin_mid"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textAllCaps="false"
-        android:textColorHint="@color/gris"
-        app:boxStrokeColor="@color/gris"
+        android:layout_marginTop="@dimen/marginTopmid"
         android:hint="@string/origin"
-        android:layout_marginStart="@dimen/marginStartEnd"
-        android:layout_marginEnd="@dimen/marginStartEnd"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textGender_characters_fragment"
-        >
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gris"
+        android:textStyle="bold"
+        app:boxStrokeColor="@color/gris"
+        app:layout_constraintEnd_toEndOf="@+id/textGender_characters_fragment"
+        app:layout_constraintStart_toStartOf="@+id/textGender_characters_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/textGender_characters_fragment">
+
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textOriginEditText_characters_fragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black" />
-        </com.google.android.material.textfield.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/episodeaperances_characters_fragment"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/TopMargin_mid"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textAllCaps="false"
-        android:textColorHint="@color/gris"
-        app:boxStrokeColor="@color/gris"
+        android:layout_marginTop="@dimen/marginTopmid"
         android:hint="@string/episode_appearances"
         android:inputType="number"
-        android:layout_marginStart="@dimen/marginStartEnd"
-        android:layout_marginEnd="@dimen/marginStartEnd"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textOrigin_characters_fragment"
-        >
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gris"
+        android:textStyle="bold"
+        app:boxStrokeColor="@color/gris"
+        app:layout_constraintEnd_toEndOf="@+id/textOrigin_characters_fragment"
+        app:layout_constraintStart_toStartOf="@+id/textOrigin_characters_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/textOrigin_characters_fragment">
+
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/episodeaperancesEditText_characters_fragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black" />
-        </com.google.android.material.textfield.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/saveButton_characters_fragment"
+        style="@style/Widget.Material3.Button.ElevatedButton"
         android:layout_width="0dp"
+        android:textSize="@dimen/textButton"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/TopMargin_mid"
-        android:layout_marginStart="@dimen/marginStartEnd"
-        android:layout_marginEnd="@dimen/marginStartEnd"
-        android:backgroundTint="@color/purple_500"
+        android:layout_marginTop="@dimen/marginTopmid"
+        android:backgroundTint="@color/verde_claro"
         android:text="@string/guardar_fragmentcharacters"
         android:textAllCaps="true"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/episodeaperances_characters_fragment"
-        />
+        app:layout_constraintEnd_toEndOf="@+id/episodeaperances_characters_fragment"
+        app:layout_constraintStart_toStartOf="@+id/episodeaperances_characters_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/episodeaperances_characters_fragment" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -43,7 +43,7 @@ class Login: Fragment(R.layout.fragment_login) {
 
     private fun setListeners() {
         ButtonLogin.setOnClickListener {
-            val text = "Correo o contraseña incorrectos"
+            val text = "Correo o contraseña incorrecta"
             val duration = Toast.LENGTH_SHORT
 
             if (InputLayouEmail.editText?.text.toString() == "Her21199@uvg.edu.gt" && InputLayouPassword.editText?.text.toString() == "Her21199@uvg.edu.gt") {

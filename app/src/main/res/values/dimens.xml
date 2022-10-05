@@ -19,6 +19,7 @@
     <dimen name="marginStartEnd">32dp</dimen>
     <dimen name="marginTopmin">10dp</dimen>
     <dimen name="marginTopmid">20dp</dimen>
-    <dimen name="marginTopMax">60dp</dimen>
+    <dimen name="marginTopMax">30dp</dimen>
     <dimen name="paddingsizemid">25dp</dimen>
+    <dimen name="textButton">15sp</dimen>
 </resources>
