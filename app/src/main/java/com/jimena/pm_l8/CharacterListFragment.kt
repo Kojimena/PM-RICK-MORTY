@@ -80,7 +80,8 @@ class CharacterListFragment : Fragment(R.layout.fragment_character_list), Charac
                 R.id.menu_item_sincronizar -> { //sincronizar con la api
                     data.clear() //Limpiamos la lista
                     apireq() //Llamamos a la función que contiene la información de la api
-                    Toast.makeText(requireContext(), "Data sincronizada", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Synchronized data", Toast.LENGTH_SHORT).show()
+
 
                     true
                 }

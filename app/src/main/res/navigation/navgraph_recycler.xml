@@ -25,6 +25,11 @@
         android:name="com.jimena.pm_l8.Characters"
         android:label="Characters Details"
         tools:layout="@layout/fragment_characters">
+        <action
+            android:id="@+id/action_characters_to_characterListFragment"
+            app:destination="@id/characterListFragment"
+            app:popUpTo="@id/characters"
+            app:popUpToInclusive="true"/>
     <argument
         android:name="characterId"
         app:argType="integer" />

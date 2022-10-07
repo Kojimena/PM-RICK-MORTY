@@ -75,14 +75,24 @@ class Characters : Fragment(R.layout.fragment_characters) {
         (activity as MainActivity).toolbar.setOnMenuItemClickListener {
             when (it.itemId) {
                 R.id.menu_item_eliminar -> {
-                    val builder = AlertDialog.Builder(requireContext())
-                    builder.apply {
+                    val alert = AlertDialog.Builder(requireContext())
+
+                    alert.apply {
                         setTitle("Warning")
                         setMessage("Are you sure you want to delete this character?")
                         setPositiveButton("Yes"
                         ) { _, _ ->
                                CoroutineScope(Dispatchers.IO).launch {
-                                    database.characterDao().delete(characters)
+                                   database.characterDao().delete(characters)
+                                   CoroutineScope(Dispatchers.Main).launch {
+                                       Toast.makeText(
+                                           requireContext(),
+                                           "Character deleted",
+                                           Toast.LENGTH_SHORT
+                                       ).show()
+                                       view?.findNavController()
+                                           ?.navigate(R.id.action_characters_to_characterListFragment)
+                                   }
                                }
                         }
                         setNegativeButton("Cancel") { _, _ -> }
@@ -97,7 +107,8 @@ class Characters : Fragment(R.layout.fragment_characters) {
                         database.characterDao().deleteAll()
                         apiReq()
                     }
-                    Toast.makeText(requireContext(), "Data sincronizada", Toast.LENGTH_SHORT).show()
+                    //Sincronized data
+                    Toast.makeText(requireContext(), "Synchronized data", Toast.LENGTH_SHORT).show()
 
                     true
                 }
@@ -105,8 +116,25 @@ class Characters : Fragment(R.layout.fragment_characters) {
             }
         }
         buttonGuardar.setOnClickListener{
+            val alert = AlertDialog.Builder(requireContext())
+
             getEditData()
-            Toast.makeText(requireContext(), "Cambios guardados correctamente", Toast.LENGTH_SHORT).show()
+            //Data is saved
+            Toast.makeText(requireContext(), "Data is saved", Toast.LENGTH_SHORT).show()
+
+            alert.apply {
+                setMessage("Do you want to go back to the Characters list?")
+                setPositiveButton("Yes"
+                ) { _, _ ->
+                    CoroutineScope(Dispatchers.Main).launch {
+                        view?.findNavController()
+                            ?.navigate(R.id.action_characters_to_characterListFragment)
+                    }
+                }
+                setNegativeButton("Keep editing") { _, _ -> }
+                show()
+            }
+            true
 
         }
     }
@@ -153,7 +181,8 @@ class Characters : Fragment(R.layout.fragment_characters) {
                 }
 
                 override fun onFailure(call: Call<CharacterDto>, t: Throwable) {
-                    Toast.makeText(requireContext(),"No tiene internet", Toast.LENGTH_SHORT).show()
+                    //No internet connection
+                    Toast.makeText(requireContext(), "No internet connection", Toast.LENGTH_SHORT).show()
                 }
 
         })
