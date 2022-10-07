@@ -1,6 +1,6 @@
 # Programación de plataformas moviles
-## Laboratorio 10 RickandMorty
-### Uso de Data Store
+## Laboratorio 11 RickandMorty
+### Almacenamiento local - Room
 
 
 ## Índice
